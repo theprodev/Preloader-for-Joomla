@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYS_EV_PRELOADER</name>
+	<author>www.EverLive.net</author>
+	<creationDate>Feb 2017</creationDate>
+	<copyright>Copyright EverLive.net. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@everlive.net</authorEmail>
+	<authorUrl>http://www.EverLive.net/</authorUrl>
+	<version>2.0.1</version>
+	<description>PLG_SYS_EV_PRELOADER_XML_DESC</description>
+	<scriptfile>installer.php</scriptfile>
+	
+	<files>
+		<filename plugin="ev_preloader">ev_preloader.php</filename>
+		<filename>index.html</filename>
+
+		<filename>images/index.html</filename>
+		<filename>images/everlive2_300.png</filename>
+		
+		<filename>styles/index.html</filename>
+		<filename>styles/pfinal.js</filename>
+		
+		<filename>styles/style-1.css</filename>
+		<filename>styles/style-1.html</filename>
+ 	</files>
+
+	<languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_ev_preloader.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_ev_preloader.sys.ini</language>
+    </languages>
+
+    <updateservers>
+        <server type="extension" priority="1" name="PLG_SYS_EV_PRELOADER">https://www.everlive.net/jed-updates/ev_preloader_update.xml</server>
+    </updateservers>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="when_show" type="list" default="0" 
+					label="PLG_SYS_EV_PRELOADER_PARAM_WHENSHOW_LABEL" 
+					description="PLG_SYS_EV_PRELOADER_PARAM_WHENSHOW_DESCR">
+					<option value="0">PLG_SYS_EV_PRELOADER_PARAM_WHENSHOW_OPT_FIRSTONLY</option>
+					<option value="1">PLG_SYS_EV_PRELOADER_PARAM_WHENSHOW_OPT_ALWAYS</option>
+				</field>
+				
+				<field name="which_animation" type="list" default="1" label="PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_LABEL" 
+					description="">
+					<option value="1">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_DEFA</option>
+					<option value="2">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_MC</option>
+					<option value="3">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_SQRS</option>
+					<option value="4">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_WAVE</option>
+					<option value="5">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_FOLLOW</option>
+					<option value="6">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_SIMPLE</option>
+					<option value="7">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_SOUND</option>
+					<option value="8">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_MC2</option>
+					<option value="9">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_TRIANG</option>
+					<option value="10">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_CURTAIN</option>
+					<option value="11">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_LOADIE</option>
+					<option value="12">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_MULTICURTAIN</option>
+					<option value="13">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_TREE</option>
+					<option value="14">PLG_SYS_EV_PRELOADER_PARAM_WHICHANIM_OPT_RAINBOW</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">			
+				<field name="is_back_color" type="list" default="0" 
+					label="PLG_SYS_EV_PRELOADER_PARAM_ISBACKCOLOR_LABEL" 
+					description="PLG_SYS_EV_PRELOADER_PARAM_ISBACKCOLOR_DESCR">
+					<option value="0">PLG_SYS_EV_PRELOADER_PARAM_ISBACKCOLOR_OPT_DEFA</option>
+					<option value="1">PLG_SYS_EV_PRELOADER_PARAM_ISBACKCOLOR_OPT_OVERRIDE</option>
+				</field>
+				
+				<field name="ov_back_color" type="color" default="#000000" 
+					label="PLG_SYS_EV_PRELOADER_PARAM_OVBACKCOLOR_LABEL" 
+					description="PLG_SYS_EV_PRELOADER_PARAM_OVBACKCOLOR_DESCR" />		
+
+				<field name="is_ani_color" type="list" default="0" 
+					label="PLG_SYS_EV_PRELOADER_PARAM_ISANYCOLOR_LABEL" 
+					description="PLG_SYS_EV_PRELOADER_PARAM_ISANYCOLOR_DESCR">
+					<option value="0">PLG_SYS_EV_PRELOADER_PARAM_ISANYCOLOR_OPT_DEFA</option>
+					<option value="1">PLG_SYS_EV_PRELOADER_PARAM_ISANYCOLOR_OPT_OVERRIDE</option>
+				</field>
+				
+				<field name="ov_ani_color" type="color" default="#ffffff" 
+					label="PLG_SYS_EV_PRELOADER_PARAM_OVANYCOLOR_LABEL" 
+					description="PLG_SYS_EV_PRELOADER_PARAM_OVANYCOLOR_DESCR" />		
+					
+				<field name="is_logo" type="list" default="0" 
+					label="PLG_SYS_EV_PRELOADER_PARAM_ISLOGO_LABEL" 
+					description="PLG_SYS_EV_PRELOADER_PARAM_ISLOGO_DESCR">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+			</fieldset>
+			
+		</fields>
+	 </config>
+
+</extension>
